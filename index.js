@@ -5,7 +5,7 @@ const addTodoButton = document.getElementById("add-todo");
 const inputBorder = document.getElementById("input-border");
 const listContainer = document.getElementById("todo-list");
 const themeIcon = document.getElementById("icon-image");
-const footerName = document.getElementById("span")
+const footerName = document.getElementById("span");
 
 let counter = 0;
 let todoList = [];
@@ -32,24 +32,23 @@ themeIcon.addEventListener("click", () => {
   const todoContainer = document.getElementById("todo-container");
 
   if (themeIcon.src.endsWith("light-mode.svg")) {
-    themeIcon.src = "http://127.0.0.1:5500/assets/icons/dark-mode.svg";
+    themeIcon.src = "assets/icons/dark-mode.svg";
     mainDiv.classList.add("todo-app-main-container-lg");
     todoContainer.style.backgroundColor = "White";
     inputElement.classList.add("input-lg");
     inputBorder.style.borderColor = "#24273d";
-    addTodoButton.classList.add("add-todo-button-lg")
+    addTodoButton.classList.add("add-todo-button-lg");
     document.getElementById("empty-line").style.color = "Black";
-    footerName.style.color = "black"
+    footerName.style.color = "black";
   } else {
-    themeIcon.src = "http://127.0.0.1:5500/assets/icons/light-mode.svg";
+    themeIcon.src = "assets/icons/light-mode.svg";
     inputBorder.style.borderColor = "#4f5668";
     mainDiv.classList.remove("todo-app-main-container-lg");
     todoContainer.style.backgroundColor = "#24273d";
     inputElement.classList.remove("input-lg");
-    addTodoButton.classList.remove("add-todo-button-lg")
+    addTodoButton.classList.remove("add-todo-button-lg");
     document.getElementById("empty-line").style.color = "rgb(237, 234, 234)";
-    footerName.style.color = "white"
-
+    footerName.style.color = "white";
   }
   updateRenderedFiles();
 });
@@ -83,7 +82,7 @@ function createTodoItem(item) {
   const checkBox = document.createElement("input");
   checkBox.type = "checkbox";
   checkBox.id = item.id;
-  checkBox.checked = item.isChecked
+  checkBox.checked = item.isChecked;
   checkBox.className = "checkbox";
 
   if (checkBox.checked) {
@@ -97,12 +96,11 @@ function createTodoItem(item) {
   }
 
   checkBox.addEventListener("click", function () {
-    handleClickFunction(checkBox, todoItem, newTodo = item.todo);
+    handleClickFunction(checkBox, todoItem, (newTodo = item.todo));
   });
 
-
   const removeIcon = document.createElement("img");
-  removeIcon.src = "/assets/icons/close1.svg";
+  removeIcon.src = "assets/icons/close1.svg";
   removeIcon.className = "removeIcon";
 
   todoItemDiv.appendChild(checkBox);
@@ -205,7 +203,7 @@ function getInputValue() {
   });
 
   const removeIcon = document.createElement("img");
-  removeIcon.src = "/assets/icons/close1.svg";
+  removeIcon.src = "assets/icons/close1.svg";
   removeIcon.className = "removeIcon";
 
   removeIcon.addEventListener("click", function () {
