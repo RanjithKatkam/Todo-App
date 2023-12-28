@@ -317,3 +317,32 @@ body {
   text-decoration: line-through;
   color: #7a7c7e;
 }
+
+
+@media(max-width: 990px){
+  .todo-app-sub-container{
+    width: 80%;
+  }
+  .footer{
+    text-align: center;
+  }
+  .footer a {
+    font-size: 10px;
+  }
+  .footer span {
+    font-size: 10px;
+  }
+}
+
+@media(max-width:500px){
+  .todo-app-sub-container{
+    height: 70%;
+    margin-top: 75px;
+  }
+  .todo-app-main-container{
+    align-items: flex-start;
+  }
+  .empty-line{
+    font-size: 18px;
+  }
+}
