@@ -321,7 +321,7 @@ body {
 
 @media(max-width: 990px){
   .todo-app-sub-container{
-    width: 80%;
+    width: 83%;
   }
   .footer{
     text-align: center;
@@ -334,9 +334,9 @@ body {
   }
 }
 
-@media(max-width:500px){
+/* @media(max-width:500px){
   .todo-app-sub-container{
-    height: 70%;
+    height: 50%;
     margin-top: 75px;
   }
   .todo-app-main-container{
@@ -345,4 +345,4 @@ body {
   .empty-line{
     font-size: 18px;
   }
-}
+} */
